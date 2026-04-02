@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Countdown</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            background: black;
+            color: white;
+            margin-top: 100px;
+        }
+
+        #count {
+            font-size: 80px;
+            animation: countdown 10s steps(10) forwards;
+        }
+
+        @keyframes countdown {
+            0% { content: "10"; }
+            10% { content: "9"; }
+            20% { content: "8"; }
+            30% { content: "7"; }
+            40% { content: "6"; }
+            50% { content: "5"; }
+            60% { content: "4"; }
+            70% { content: "3"; }
+            80% { content: "2"; }
+            90% { content: "1"; }
+            100% { content: "0"; }
+        }
+
+        #count::after {
+            content: "10";
+            animation: countdown 10s steps(10) forwards;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Countdown</h1>
+<div id="count"></div>
+
+</body>
+</html>
